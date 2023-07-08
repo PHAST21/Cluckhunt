@@ -9,7 +9,6 @@ public class DangerZone : MonoBehaviour
     [SerializeField]private Health playerHealth;
      void Start()
     {
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -18,7 +17,7 @@ public class DangerZone : MonoBehaviour
             if(collision.gameObject.CompareTag("Player"))
             {
                 Debug.Log("gmaing");
-                playerHealth.TakeDamage();
+                collision.gameObject.GetComponent<Health>().TakeDamage();
             }
         }
     }
