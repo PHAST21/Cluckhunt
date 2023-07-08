@@ -28,7 +28,7 @@ public class Score : MonoBehaviour
 
     public void bigPoint()
     {
-        score = +50;
+        score+=50;
         scoreText.text = score.ToString() + " POINTS";
     }
 }
