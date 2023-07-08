@@ -16,13 +16,13 @@ public class Score : MonoBehaviour
     }
     void Start()
     {
-        scoreText.text = score.ToString() + "POINTS";
+        scoreText.text = score.ToString() + " POINTS";
     }
 
     public void AddPoint()
     {
         score += 10;
-        scoreText.text = score.ToString() + "POINTS";
+        scoreText.text = score.ToString() + " POINTS";
     }
     // Update is called once per frame
     void Update()
