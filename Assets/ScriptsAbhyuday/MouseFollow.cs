@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MouseFollow : MonoBehaviour
 {
     [SerializeField]private Camera maincamera;
-    public float moveSpeed;
+    public float moveSpeed=3;
     private Rigidbody2D rb;
     private Vector2 Position = new Vector2(0, 0);
     void Start()

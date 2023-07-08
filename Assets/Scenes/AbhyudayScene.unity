@@ -1008,14 +1008,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 63.81
+  m_fontSizeBase: 63.81
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2485,6 +2485,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8033774575762974976, guid: cb739c1aa01456945a57f321204fce91, type: 3}
+      propertyPath: UIscore
+      value: 
+      objectReference: {fileID: 1163694021}
+    - target: {fileID: 8033774575762974976, guid: cb739c1aa01456945a57f321204fce91, type: 3}
+      propertyPath: UISscore
+      value: 
+      objectReference: {fileID: 1163694021}
     - target: {fileID: 8033774575762975036, guid: cb739c1aa01456945a57f321204fce91, type: 3}
       propertyPath: m_Name
       value: Player

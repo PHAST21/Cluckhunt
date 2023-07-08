@@ -11,11 +11,13 @@ public class GameManager : MonoBehaviour
     public bool active,wave1,wave2,wave3;
     public int currentPos,score;
     private MouseFollow PlayerMovement;
+    private Health playerHealth;
 
     private void Start()
     {
         wave1 = true;
         PlayerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<MouseFollow>();
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
     }
     void Update()
     {
@@ -249,6 +251,7 @@ public class GameManager : MonoBehaviour
             dangerZones[j].gameObject.SetActive(false);
             reticles[j].SetActive(false);
         }
+        playerHealth.IncrementScore();
         yield return new WaitForSeconds(2f);
         active = true;
     }

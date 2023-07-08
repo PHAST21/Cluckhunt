@@ -6,12 +6,30 @@ using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
     public float Lives;
-    // Start is called before the first frame update
+    private float currentLife;
+    public Score UIscore;
+
+    private void Start()
+    {
+        currentLife = Lives;
+    }
     private void Update()
     {
         if (Lives <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+
+    public void IncrementScore()
+    {
+        if (Lives < currentLife)
+        {
+            currentLife = Lives;
+        }
+        else
+        {
+            UIscore.AddPoint();
         }
     }
    public void TakeDamage()
