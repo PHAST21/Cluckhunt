@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        /*StartCoroutine(CountDown());*/
         wave1 = true;
         PlayerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<MouseFollow>();
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
@@ -122,9 +123,14 @@ public class GameManager : MonoBehaviour
         if (wave3)
         {
             int i = Random.Range(0, 15);
+
             for (int j = 0; j < 15; j++)
             {
                 if (j == i)
+                {
+                    continue;
+                }
+                else if (j == (i + 7))
                 {
                     continue;
                 }
@@ -233,6 +239,12 @@ public class GameManager : MonoBehaviour
             {
                 if (j == i)
                 {
+                    
+                    continue;
+                    
+                }
+                else if (j == (i+3))
+                {
                     continue;
                 }
                 dangerZones[j].gameObject.SetActive(true);
@@ -255,9 +267,18 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(2f);
         active = true;
     }
+/*    IEnumerator Countdown()
+    {
+
+    }*/
     IEnumerator Preshoot(int i)
     {
-        yield return new WaitForSeconds(0.5f);
+        if (wave1)
+            yield return new WaitForSeconds(0.5f);
+        else if (wave2)
+            yield return new WaitForSeconds(0.6f);
+        else if (wave3)
+            yield return new WaitForSeconds(0.8f);
         Shoot(i);
     }
     IEnumerator Flash()
