@@ -17,18 +17,14 @@ public class CountdownController : MonoBehaviour
         while(countdownTime>0)
         {
             countdownDisplay.text = countdownTime.ToString();
-
             yield return new WaitForSeconds(1f);
-
             countdownTime--;
         }
-
         countdownDisplay.text = "FLY!";
-
-        GameManager.instance.Aiming();
-
         yield return new WaitForSeconds(1f);
-
         countdownDisplay.gameObject.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().wave1 = true;
+        
     }
 }

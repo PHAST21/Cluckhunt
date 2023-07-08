@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         /*StartCoroutine(CountDown());*/
-        wave1 = true;
         PlayerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<MouseFollow>();
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
     }
