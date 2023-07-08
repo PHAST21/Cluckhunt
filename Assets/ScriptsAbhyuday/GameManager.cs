@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
     public List<DangerZone> dangerZones;
     public List<GameObject> reticles;
     public GameObject white, black;
@@ -134,7 +135,7 @@ public class GameManager : MonoBehaviour
             StartCoroutine(Preshoot(i));
         }
     }
-    void Shoot(int i)
+    public void Shoot(int i)
     {
         StartCoroutine(Flash());
         if (wave1)
