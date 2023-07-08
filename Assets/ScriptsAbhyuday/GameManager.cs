@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public int currentPos,score;
     private MouseFollow PlayerMovement;
     private Health playerHealth;
+    public PickupSpawn pickupSpawn;
+    private bool spawnStart=false;
 
     private void Start()
     {
@@ -38,8 +40,20 @@ public class GameManager : MonoBehaviour
             wave3 = true;
             PlayerMovement.moveSpeed = 7;
         }
+        if (!spawnStart)
+        {
+            if (score > 5)
+            {
+                InvokeRepeating("SpawnPickup", 1f, 8f);
+                spawnStart = true;
+            }
+        }
     }
 
+    void SpawnPickup()
+    {
+        pickupSpawn.SpawnPickup();
+    }
     public void Aiming()
     {
         if (wave1)

@@ -7,6 +7,7 @@ public class Score : MonoBehaviour
 {
     public static Score instance;
     public TextMeshProUGUI scoreText;
+    public PickupSpawn pickupSpawn;
 
     int score = 0;
 
@@ -24,9 +25,10 @@ public class Score : MonoBehaviour
         score += 10;
         scoreText.text = score.ToString() + " POINTS";
     }
-    // Update is called once per frame
-    void Update()
-    {
 
+    public void bigPoint()
+    {
+        score = +50;
+        scoreText.text = score.ToString() + " POINTS";
     }
 }
