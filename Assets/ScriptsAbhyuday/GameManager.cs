@@ -15,12 +15,15 @@ public class GameManager : MonoBehaviour
     private Health playerHealth;
     public PickupSpawn pickupSpawn;
     private bool spawnStart=false;
+    private AudioSource audioSource;
+    public AudioClip GunshotSFX;
 
     private void Start()
     {
         /*StartCoroutine(CountDown());*/
         PlayerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<MouseFollow>();
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+        audioSource = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -267,6 +270,7 @@ public class GameManager : MonoBehaviour
             StartCoroutine(Cooldown(i));
             score++;
         }
+        audioSource.PlayOneShot(GunshotSFX, 0.9f);
     }
     IEnumerator Cooldown(int i)
     {
