@@ -30,10 +30,7 @@ public class Health : MonoBehaviour
         {
 
             /*SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);*/
-            GM.active = false;
-            GM.wave1 = false;
-            GM.wave2 = false;
-            GM.wave3 = false;
+            GM.score = -2;
             GameOverMenu.SetActive(true);
             Destroy(gameObject);
             

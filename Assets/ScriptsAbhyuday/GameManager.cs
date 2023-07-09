@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public PickupSpawn pickupSpawn;
     private bool spawnStart=false;
     private AudioSource audioSource;
+    public Animator catAnim;
     public AudioClip GunshotSFX;
 
     private void Start()
@@ -42,6 +43,13 @@ public class GameManager : MonoBehaviour
             wave2 = false;
             wave3 = true;
             PlayerMovement.moveSpeed = 7;
+        }
+        if (score < -1)
+        {
+            wave1 = false;
+            wave2 = false;
+            wave3 = false;
+            active = false;
         }
         if (!spawnStart)
         {
@@ -71,45 +79,45 @@ public class GameManager : MonoBehaviour
             if (currentPos > 0 && currentPos < 4)
             {
                 int i = currentPos;
-                reticles[currentPos].SetActive(true);
-                reticles[currentPos + 5].SetActive(true);
-                reticles[currentPos - 1].SetActive(true);
+                reticles[i].SetActive(true);
+                reticles[i + 5].SetActive(true);
+                reticles[i - 1].SetActive(true);
                 active = false;
                 StartCoroutine(Preshoot(i));
             }
             else if (currentPos == 4)
             {
                 int i = currentPos;
-                reticles[currentPos].SetActive(true);
-                reticles[currentPos + 5].SetActive(true);
-                reticles[currentPos + 4].SetActive(true);
+                reticles[i].SetActive(true);
+                reticles[i + 5].SetActive(true);
+                reticles[i + 4].SetActive(true);
                 active = false;
                 StartCoroutine(Preshoot(i));
             }
             else if (currentPos > 4 && currentPos < 9) 
             {
                 int i = currentPos;
-                reticles[currentPos].SetActive(true);
-                reticles[currentPos - 5].SetActive(true);
-                reticles[currentPos + 1].SetActive(true);
+                reticles[i].SetActive(true);
+                reticles[i - 5].SetActive(true);
+                reticles[i + 1].SetActive(true);
                 active = false;
                 StartCoroutine(Preshoot(i));
             }
             else if (currentPos == 9)
             {
                 int i = currentPos;
-                reticles[currentPos].SetActive(true);
-                reticles[currentPos + 5].SetActive(true);
-                reticles[currentPos - 5].SetActive(true);
+                reticles[i].SetActive(true);
+                reticles[i + 5].SetActive(true);
+                reticles[i - 5].SetActive(true);
                 active = false;
                 StartCoroutine(Preshoot(i));
             }
             else if (currentPos > 9 && currentPos < 14)
             {
                 int i = currentPos;
-                reticles[currentPos].SetActive(true);
-                reticles[currentPos + 1].SetActive(true);
-                reticles[currentPos - 5].SetActive(true);
+                reticles[i].SetActive(true);
+                reticles[i + 1].SetActive(true);
+                reticles[i - 5].SetActive(true);
                 active = false;
                 StartCoroutine(Preshoot(i));
             }
@@ -117,7 +125,6 @@ public class GameManager : MonoBehaviour
             else if (currentPos == 0)
             {
                 int i = currentPos;
-                reticles[currentPos].SetActive(true);
                 reticles[0].SetActive(true);
                 reticles[1].SetActive(true);
                 reticles[5].SetActive(true);
@@ -128,7 +135,6 @@ public class GameManager : MonoBehaviour
             else if (currentPos == 14)
             {
                 int i = currentPos;
-                reticles[currentPos].SetActive(true);
                 reticles[8].SetActive(true);
                 reticles[9].SetActive(true);
                 reticles[13].SetActive(true);
@@ -169,62 +175,62 @@ public class GameManager : MonoBehaviour
         }
         else if (wave2)
         {
-            if (currentPos>0&&currentPos<4)
+            if (i>0&&i<4)
             {
                 dangerZones[i].gameObject.SetActive(true);
                 dangerZones[i].GetComponent<DangerZone>().active = true;
-                dangerZones[currentPos + 5].gameObject.SetActive(true);
-                dangerZones[currentPos + 5].GetComponent<DangerZone>().active = true;
-                dangerZones[currentPos - 1].gameObject.SetActive(true);
-                dangerZones[currentPos - 1].GetComponent<DangerZone>().active = true;
+                dangerZones[i + 5].gameObject.SetActive(true);
+                dangerZones[i + 5].GetComponent<DangerZone>().active = true;
+                dangerZones[i - 1].gameObject.SetActive(true);
+                dangerZones[i - 1].GetComponent<DangerZone>().active = true;
                 StartCoroutine(Cooldown(i));
                 score++;
             }
-            else if (currentPos == 4)
+            else if (i == 4)
             {
                 dangerZones[i].gameObject.SetActive(true);
                 dangerZones[i].GetComponent<DangerZone>().active = true;
-                dangerZones[currentPos + 5].gameObject.SetActive(true);
-                dangerZones[currentPos + 5].GetComponent<DangerZone>().active = true;
-                dangerZones[currentPos + 4].gameObject.SetActive(true);
-                dangerZones[currentPos + 4].GetComponent<DangerZone>().active = true;
+                dangerZones[i + 5].gameObject.SetActive(true);
+                dangerZones[i + 5].GetComponent<DangerZone>().active = true;
+                dangerZones[i + 4].gameObject.SetActive(true);
+                dangerZones[i + 4].GetComponent<DangerZone>().active = true;
                 StartCoroutine(Cooldown(i));
                 score++;
             }
-            else if (currentPos > 4 && currentPos < 9)
+            else if (i > 4 && i < 9)
             {
                 dangerZones[i].gameObject.SetActive(true);
                 dangerZones[i].GetComponent<DangerZone>().active = true;
-                dangerZones[currentPos - 5].gameObject.SetActive(true);
-                dangerZones[currentPos - 5].GetComponent<DangerZone>().active = true;
-                dangerZones[currentPos + 1].gameObject.SetActive(true);
-                dangerZones[currentPos + 1].GetComponent<DangerZone>().active = true;
+                dangerZones[i - 5].gameObject.SetActive(true);
+                dangerZones[i - 5].GetComponent<DangerZone>().active = true;
+                dangerZones[i + 1].gameObject.SetActive(true);
+                dangerZones[i + 1].GetComponent<DangerZone>().active = true;
                 StartCoroutine(Cooldown(i));
                 score++;
             }
-            else if(currentPos == 9)
+            else if(i == 9)
             {
                 dangerZones[i].gameObject.SetActive(true);
                 dangerZones[i].GetComponent<DangerZone>().active = true;
-                dangerZones[currentPos + 5].gameObject.SetActive(true);
-                dangerZones[currentPos + 5].GetComponent<DangerZone>().active = true;
-                dangerZones[currentPos - 5].gameObject.SetActive(true);
-                dangerZones[currentPos - 5].GetComponent<DangerZone>().active = true;
+                dangerZones[i + 5].gameObject.SetActive(true);
+                dangerZones[i + 5].GetComponent<DangerZone>().active = true;
+                dangerZones[i - 5].gameObject.SetActive(true);
+                dangerZones[i - 5].GetComponent<DangerZone>().active = true;
                 StartCoroutine(Cooldown(i));
                 score++;
             }
-            else if (currentPos > 9 && currentPos < 14)
+            else if (i > 9 && i < 14)
             {
                 dangerZones[i].gameObject.SetActive(true);
                 dangerZones[i].GetComponent<DangerZone>().active = true;
-                dangerZones[currentPos + 1].gameObject.SetActive(true);
-                dangerZones[currentPos + 1].GetComponent<DangerZone>().active = true;
-                dangerZones[currentPos - 5].gameObject.SetActive(true);
-                dangerZones[currentPos - 5].GetComponent<DangerZone>().active = true;
+                dangerZones[i + 1].gameObject.SetActive(true);
+                dangerZones[i + 1].GetComponent<DangerZone>().active = true;
+                dangerZones[i - 5].gameObject.SetActive(true);
+                dangerZones[i - 5].GetComponent<DangerZone>().active = true;
                 StartCoroutine(Cooldown(i));
                 score++;
             }
-            else if( currentPos ==0) {
+            else if(i ==0) {
                 dangerZones[0].gameObject.SetActive(true);
                 dangerZones[0].GetComponent<DangerZone>().active = true;
                 dangerZones[1].gameObject.SetActive(true);
@@ -236,7 +242,7 @@ public class GameManager : MonoBehaviour
                 StartCoroutine(Cooldown(i));
                 score++;
             }
-            else if (currentPos == 14)
+            else if (i == 14)
             {
                 dangerZones[8].gameObject.SetActive(true);
                 dangerZones[8].GetComponent<DangerZone>().active = true;
@@ -271,6 +277,7 @@ public class GameManager : MonoBehaviour
             score++;
         }
         audioSource.PlayOneShot(GunshotSFX, 0.9f);
+        catAnim.SetBool("Shooting", true);
     }
     IEnumerator Cooldown(int i)
     {

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3678004829753019101}
   - component: {fileID: 3678004829753019100}
   - component: {fileID: 3678004829753019102}
-  - component: {fileID: 3678004829753019103}
+  - component: {fileID: 6564238499359887529}
   m_Layer: 0
   m_Name: GoldenEgg
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3678004829753019099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 17.55, y: -2.95, z: -1.698426}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.064600006, y: 0.064600006, z: 0.646}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 328e0acf76cc9b84c9dc1ba5fe210662, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +99,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 740ba236c4d871a49a7c65a770d062df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 0}
   speed: 10
 --- !u!50 &3678004829753019102
 Rigidbody2D:
@@ -122,7 +121,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &3678004829753019103
+--- !u!58 &6564238499359887529
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,4 +136,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 7.1875

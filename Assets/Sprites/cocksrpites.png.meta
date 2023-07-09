@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d987de06a8eebc241bfdf25ee3fd386d
+guid: 13e2885a06a21e24ba8cc671ec64beeb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -141,85 +141,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chicken_Dead_0
+      name: cocksrpites_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 0
-        width: 450
-        height: 400
-      alignment: 9
-      pivot: {x: 0.4880441, y: 0.1065789}
+        x: 4
+        y: 4
+        width: 236
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5c479740e3d9c248bd2e46d6544a8d6
-      internalID: 1120166466
+      spriteID: c1b0f9433969f9641889e71cf745079c
+      internalID: 2067537461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken_Dead_2
+      name: cocksrpites_1
       rect:
         serializedVersion: 2
-        x: 930
+        x: 260
         y: 0
-        width: 450
-        height: 400
-      alignment: 9
-      pivot: {x: 0.4880441, y: 0.10657895}
+        width: 248
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d54dabf0b23bc84aaf9f5ca075e2885
-      internalID: 1583649512
+      spriteID: e5c8c12ce2be6a04186809378c427da0
+      internalID: -778965763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken_Dead_4
+      name: cocksrpites_2
       rect:
         serializedVersion: 2
-        x: 461
-        y: 0
-        width: 458
-        height: 400
-      alignment: 9
-      pivot: {x: 0.5000925, y: 0.10768734}
+        x: 516
+        y: 4
+        width: 252
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd5c8c44397a33440a58886af38a7623
-      internalID: -1554716577
+      spriteID: 954a58e421e3039428826d114533da1e
+      internalID: 807165377
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Chicken_Dead_6
+      name: cocksrpites_3
       rect:
         serializedVersion: 2
-        x: 1390
+        x: 772
         y: 0
-        width: 450
-        height: 400
-      alignment: 9
-      pivot: {x: 0.4880441, y: 0.1065789}
+        width: 248
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fafda5e710c337d4f8280b8d6cb126fb
-      internalID: 1758532535
+      spriteID: 703542b81c3109d449276554e5e886b9
+      internalID: 812965200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cocksrpites_4
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 4
+        width: 252
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 495f8d7b915df624c9094ee90f3bee93
+      internalID: -906078511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cocksrpites_5
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 0
+        width: 248
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f981e752a4fbb4b48bcd64f3bde8ff26
+      internalID: 1963627842
       vertices: []
       indices: 
       edges: []
@@ -235,13 +277,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Chicken_Dead_5: -176758462
-      Chicken_Dead_4: -1554716577
-      Chicken_Dead_6: 1758532535
-      Chicken_Dead_2: 1583649512
-      Chicken_Dead_0: 1120166466
-      Chicken_Dead_3: 2130924958
-      Chicken_Dead_1: -475708053
+      cocksrpites_2: 807165377
+      cocksrpites_4: -906078511
+      cocksrpites_5: 1963627842
+      cocksrpites_3: 812965200
+      cocksrpites_1: -778965763
+      cocksrpites_0: 2067537461
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

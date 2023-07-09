@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8033774575762975038}
   - component: {fileID: 8033774575762975037}
   - component: {fileID: 8033774575762974976}
-  - component: {fileID: 3489511612031931783}
   - component: {fileID: 4066118852010897354}
+  - component: {fileID: 5032647242925090640}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -114,23 +114,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9003f4a484fac2341bfe41bfc3df08e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eggYolk: {fileID: 0}
   Lives: 3
---- !u!58 &3489511612031931783
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8033774575762975036}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+  UIscore: {fileID: 0}
+  GameOverMenu: {fileID: 0}
+  CluckSFX: []
+  Egg1: {fileID: 0}
+  Egg2: {fileID: 0}
+  Egg3: {fileID: 0}
 --- !u!50 &4066118852010897354
 Rigidbody2D:
   serializedVersion: 4
@@ -152,3 +143,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &5032647242925090640
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8033774575762975036}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
